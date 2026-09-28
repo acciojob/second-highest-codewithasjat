@@ -1,20 +1,20 @@
-//your JS code here. If required.
-function secondHighest(arr) {
-    if (arr.length < 2) {
-        return -Infinity;
-    }
+function secondlargest(arr){
+    let largest = -Infinity
+    let secondlargest = -Infinity
+    for(let i=0 ; i<=arr.length-1 ; i++){
+        if(arr[i]>largest){
+               
+            secondlargest = largest
 
-    let highest = -Infinity;
-    let secondHighest = -Infinity;
 
-    for (let i = 0; i < arr.length; i++) {
-        if (arr[i] > highest) {
-            secondHighest = highest;
-            highest = arr[i];
-        } else if (arr[i] > secondHighest && arr[i] !== highest) {
-            secondHighest = arr[i];
+            largest = arr[i]
+
+
+        }
+        if(secondlargest <arr[i] && largest >arr[i]){
+            secondlargest = arr[i]
+
         }
     }
-
-    return secondHighest;
+   return secondlargest
 }
